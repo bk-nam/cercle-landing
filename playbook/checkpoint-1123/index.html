@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>월매출 10억을 만드는 경영 플레이북</title>
+<meta name="description" content="월매출 10억까지 가는 길은 순서와 방법이 정해져 있어요. 플레이북대로 하도록 돕는 피부과 경영 소프트웨어, 세르클.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="월매출 10억을 만드는 경영 플레이북">
+<meta property="og:description" content="월매출 10억까지 가는 길은 순서와 방법이 정해져 있어요. 플레이북대로 하도록 돕는 피부과 경영 소프트웨어, 세르클.">
+<meta property="og:url" content="https://bk-nam.github.io/cercle-landing/playbook/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23151515'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;display=swap">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<style id="css">/* 한 화면에 큰 문장 하나와 그림 하나. 페이지는 흑백이고, 파랑은 소프트웨어 화면 안에서만 쓴다. */
+:root{--ink:#17191C;--paper:#ffffff;--line:#E3E7EC;--mute:#4B5563;--dimline:#C5CBD3;--dim:#636B77;--wash:#F3F5F8;--soft:#E1E6EE;--hover:#33373D;--shadow:rgba(23,25,28,.10);
+--w-bg:#ffffff;--w-ink:#17191C;--w-mute:#4B5563;--w-line:#E3E7EC;--w-wash:#F3F5F8;--blue:#1D4ED8;--blue-soft:#E8EEFF;--blue-mid:#BFD0FF;--on-blue:#ffffff;--tick:#1D4ED8;
+--font:'Noto Sans KR',system-ui,-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ink:#F3F3F1;--paper:#121212;--line:#2C2C2C;--mute:#A8A8A8;--dimline:#555555;--dim:#8C8C8C;--wash:#1C1C1C;--soft:#2A2A2A;--hover:#D6D6D6;--shadow:rgba(0,0,0,.5);--tick:#7BA2FF;color-scheme:dark}}
+:root[data-theme="dark"]{--ink:#F3F3F1;--paper:#121212;--line:#2C2C2C;--mute:#A8A8A8;--dimline:#555555;--dim:#8C8C8C;--wash:#1C1C1C;--soft:#2A2A2A;--hover:#D6D6D6;--shadow:rgba(0,0,0,.5);--tick:#7BA2FF;color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.5;word-break:keep-all;overflow-wrap:anywhere}
+#app{padding-bottom:88px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.blk,.detail-in{max-width:1180px;margin:0 auto}
+.scene{padding-block:56px;border-bottom:1px solid var(--line)}
+.tx{min-width:0}
+.pic{min-width:0;margin-top:32px;max-width:560px}
+.pill{display:inline-block;font-size:13px;font-weight:500;color:var(--mute);border:1px solid var(--dimline);border-radius:999px;padding:4px 12px;margin-bottom:24px}
+.big{margin:0;font-size:clamp(28px,4.6vw,44px)!important;line-height:1.35;font-weight:900;letter-spacing:-0.02em;text-wrap:balance}
+h1.big{font-size:clamp(34px,6vw,60px)!important}
+.note{font-size:13px;line-height:1.6;color:var(--mute);margin:16px 0 0}
+.lab{font-size:14px;font-weight:700;margin:22px 0 0}
+
+/* 매출 눈금 */
+.gauge{display:flex;gap:8px;margin-top:24px}
+.gauge:first-child{margin-top:0}
+.g{box-sizing:border-box;height:96px;border-radius:16px;background-color:var(--soft);color:var(--mute);display:flex;flex-direction:column;justify-content:center;padding:0 18px;font-weight:900;font-size:22px;line-height:1.25;min-width:0}
+.g small{font-size:13px;font-weight:500;line-height:1.3;margin-top:3px}
+.g.on{color:var(--paper);background-image:linear-gradient(var(--ink),var(--ink));background-repeat:no-repeat;background-size:100% 100%}
+/* 그 장면에서 새로 말하는 칸(new)만 차오른다. 앞 장면에서 이미 찬 칸은 그대로 서 있다. */
+.g.on.new{transition:background-size .9s cubic-bezier(.2,.7,.2,1) .2s,color .3s ease .3s}
+.anim .pic:not(.live) .g.on.new{background-size:0% 100%;color:var(--mute)}
+.g small.new{transition:opacity .5s ease .3s}
+.anim .pic:not(.live) .g small.new{opacity:0}
+
+/* 일정표 */
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.d{box-sizing:border-box;height:150px;border-radius:14px;background:var(--wash);padding:12px 10px;font-size:15px;font-weight:700;display:flex;flex-direction:column;justify-content:space-between;min-width:0}
+.d small{font-size:12px;font-weight:500;line-height:1.35;color:var(--mute)}
+.d.on{background:var(--ink);color:var(--paper)}
+.d.on small{color:var(--paper)}
+.steps{display:flex;flex-direction:column;gap:8px;margin-top:20px}
+.steps .st{transition:opacity .45s ease,transform .45s ease}
+.steps .st:nth-child(1){transition-delay:.15s}.steps .st:nth-child(2){transition-delay:.4s}.steps .st:nth-child(3){transition-delay:.65s}
+.anim .pic:not(.live) .steps .st{opacity:0;transform:translateY(8px)}
+.st{box-sizing:border-box;border-radius:14px;background:var(--wash);padding:16px 18px;font-size:18px;font-weight:700;min-width:0}
+
+/* 그림으로 그린 퍼널 */
+.fn{display:flex;flex-direction:column;gap:6px;align-items:center}
+.f{box-sizing:border-box;min-height:44px;border-radius:12px;background:var(--wash);display:flex;align-items:center;justify-content:space-between;gap:8px;padding:4px 16px;font-size:16px;font-weight:700}
+.f span{font-weight:500;font-size:14px;text-align:right;color:var(--mute)}
+.f.on{background:var(--ink);color:var(--paper)}
+.f.on span{color:var(--paper)}
+.f.dim{background:transparent;border:1.5px dashed var(--dimline);color:var(--dim)}
+.up{display:inline-block;background:var(--ink);color:var(--paper);border-radius:999px;padding:2px 9px;font-size:13px;font-weight:700;margin-left:6px}
+
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{box-sizing:border-box;border-radius:18px;background:var(--wash);padding:20px;min-width:0}
+.card h3{margin:0 0 8px;font-size:20px;line-height:1.35;font-weight:900}
+.card p{margin:0;font-size:15px;line-height:1.6}
+.card.on{background:var(--ink);color:var(--paper)}
+.tag{display:inline-block;font-size:12px;font-weight:700;border:1px solid var(--ink);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+.bar{display:flex;gap:6px;height:56px;margin-top:8px}
+.b{box-sizing:border-box;border-radius:12px;background:var(--wash);display:flex;align-items:center;padding:0 12px;font-size:15px;line-height:1.2;font-weight:700;min-width:0}
+.b.on{background:var(--ink);color:var(--paper)}
+.li{border-radius:14px;background:var(--wash);padding:16px 18px;font-size:17px;font-weight:700;margin-top:8px}
+.li:first-child{margin-top:0}
+.li small{display:block;font-size:14px;font-weight:400;margin-top:6px;line-height:1.6;color:var(--mute)}
+.li small a{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.faq .li{padding:13px 18px;margin-top:6px}
+.faq .li small{margin-top:4px}
+
+/* 소프트웨어 화면. 밝은 화면 한 가지로 고정한다. */
+.win{background:var(--w-bg);color:var(--w-ink);border:1px solid var(--w-line);border-radius:20px;box-shadow:0 12px 40px var(--shadow);overflow:hidden;margin-top:14px}
+.win:first-child{margin-top:0}
+.winbar{display:flex;align-items:center;gap:4px;height:50px;padding:0 16px;border-bottom:1px solid var(--w-line);font-size:14px;white-space:nowrap;overflow:hidden}
+.winbar b{font-size:15px;font-weight:900;margin-right:10px}
+.tab{padding:5px 11px;border-radius:8px;color:var(--w-mute);font-weight:500}
+.tab.on{background:var(--blue-soft);color:var(--blue);font-weight:700}
+.winbody{padding:14px 18px 18px}
+.r{display:grid;grid-template-columns:52px minmax(0,1fr) 150px;align-items:center;gap:12px;font-size:15px;font-weight:700;min-height:36px}
+.track{display:block;height:24px;border-radius:8px;background:var(--w-wash);overflow:hidden}
+.fill{display:block;height:100%;min-width:6px;border-radius:8px;background:var(--blue-mid);transform-origin:left center;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.r:nth-child(2) .fill{transition-delay:.06s}.r:nth-child(3) .fill{transition-delay:.12s}.r:nth-child(4) .fill{transition-delay:.18s}.r:nth-child(5) .fill{transition-delay:.24s}.r:nth-child(6) .fill{transition-delay:.3s}.r:nth-child(7) .fill{transition-delay:.36s}.r:nth-child(8) .fill{transition-delay:.42s}
+.v{text-align:right;font-weight:500;color:var(--w-mute);font-size:14px}
+.win .up{background:var(--blue);color:var(--on-blue);transition:opacity .4s ease .7s,transform .4s ease .7s}
+.anim .pic:not(.live) .fill{transform:scaleX(0)}
+.anim .pic:not(.live) .win .up{opacity:0;transform:translateY(4px)}
+.win .lab{margin:0 0 4px;font-size:13px;font-weight:500;color:var(--w-mute)}
+.hb{margin-top:14px}
+.hbl{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:14px;font-weight:700;margin-bottom:6px}
+.hbl b{font-size:17px;font-weight:900;color:var(--blue)}
+.hb .fill{background:var(--blue)}
+.win .row{display:grid;grid-template-columns:1.1fr 1fr 1.7fr;border-bottom:1px solid var(--w-line)}
+.win .row:last-child{border-bottom:0}
+.win .c{box-sizing:border-box;padding:11px 10px;font-size:14px;line-height:1.4;font-weight:700;min-width:0}
+.win .c.hd{font-size:12px;font-weight:500;color:var(--w-mute);padding:4px 10px 8px}
+.win .c.on{background:var(--blue-soft);color:var(--blue)}
+.win .c.on:first-child{border-radius:10px 0 0 10px}
+.win .c.on:last-child{border-radius:0 10px 10px 0}
+
+.more{font:inherit;font-size:17px;font-weight:700;background:var(--paper);color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:12px 24px;min-height:48px;cursor:pointer}
+.more:hover{background:var(--ink);color:var(--paper)}
+.cta{display:inline-block;font-size:19px;font-weight:700;background:var(--ink);color:var(--paper);border-radius:999px;padding:16px 32px;text-decoration:none;margin-top:32px}
+.cta:hover{background:var(--hover)}
+.more:focus-visible,.cta:focus-visible,
+.detail{background:var(--wash);margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:48px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line)}
+[data-e]{border-radius:2px}
+.g[data-e]{border-radius:16px}.d[data-e]{border-radius:14px}.st[data-e],.li[data-e]{border-radius:14px}.f[data-e],.b[data-e]{border-radius:12px}.pill[data-e],.cta[data-e]{border-radius:999px}.tab[data-e]{border-radius:8px}
+[data-e][contenteditable="true"]{outline:2px dashed var(--ink);outline-offset:4px;cursor:text}
+.win [data-e][contenteditable="true"]{outline-color:var(--blue)}
+
+
+
+@media (max-width:899px){
+.d{height:108px;padding:8px 5px;font-size:13px}.d small{font-size:11px}
+.cards{grid-template-columns:minmax(0,1fr)}
+.card{padding:16px}.card h3{font-size:17px}.card p{font-size:14px}
+.g{font-size:17px;padding:0 10px;height:88px}.g small{font-size:11px}
+.b{font-size:12px;padding:0 6px}
+.f{min-width:min(100%,230px);font-size:15px;padding:4px 12px}.f span{font-size:12px}
+.st{font-size:16px;padding:14px}
+.r{grid-template-columns:44px minmax(0,1fr) 122px;gap:8px;font-size:14px}.v{font-size:12px}
+.win .up{font-size:12px;padding:1px 7px;margin-left:4px}
+.winbody{padding:12px 12px 14px}.winbar{padding:0 10px}.tab{padding:5px 8px}
+.win .c{font-size:12px;padding:10px 6px}
+}
+@media (min-width:900px) and (min-height:620px){
+.blk.pin{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:56px;border-bottom:1px solid var(--line)}
+.blk.pin .scene{grid-column:1;min-height:100vh;box-sizing:border-box;display:flex;align-items:center;border-bottom:0}
+.blk.pin .stage{grid-column:2;position:sticky;top:0;height:100vh;align-self:start}
+.blk.pin .stage .pic{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);margin:0;max-width:none;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility 0s linear .35s}
+.blk.pin .stage .pic.show{opacity:1;visibility:visible;transition:opacity .35s ease}
+}
+@media (prefers-reduced-motion:reduce){.blk.pin .stage .pic,.blk.pin .stage .pic.show,.g.on.new,.g small.new,.steps .st,.fill,.win .up{transition:none}}
+/* 확률 그림: 상담 100명을 점으로. 속이 빈 점이 개선으로 더 결제하는 분 */
+.prob{border-radius:18px;background:var(--wash);padding:18px 20px}
+.probhd{display:flex;justify-content:space-between;align-items:center;gap:8px 12px;flex-wrap:wrap}
+.probt{font-size:17px;font-weight:700}
+.probn{display:flex;align-items:center;gap:8px;font-size:22px;font-weight:900}
+.probn > span:first-child{color:var(--mute)}
+.chip{font-size:13px;font-weight:700;background:var(--ink);color:var(--paper);border-radius:999px;padding:3px 10px;margin-left:4px}
+.dots{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:6px;margin-top:16px}
+.dot{display:block;aspect-ratio:1;border-radius:50%;background:var(--soft)}
+.dot.on{background:var(--ink)}
+.dot.add{background:var(--paper);box-shadow:inset 0 0 0 3px var(--ink);transition:transform .45s cubic-bezier(.3,1.6,.5,1) .5s}
+.dot.add + .dot.add{transition-delay:.62s}.dot.add + .dot.add + .dot.add{transition-delay:.74s}.dot.add + .dot.add + .dot.add + .dot.add{transition-delay:.86s}.dot.add + .dot.add + .dot.add + .dot.add + .dot.add{transition-delay:.98s}
+.anim .pic:not(.live) .dot.add{transform:scale(0)}
+.leg{display:flex;flex-wrap:wrap;gap:6px 16px;margin:14px 0 0;font-size:13px;color:var(--mute)}
+.leg > span{display:inline-flex;align-items:center;gap:6px}
+.leg .dot{width:12px;flex:none}
+/* 잡아 둔 퍼널: 테두리로 묶고 속을 채운다. 광고는 그 위에 붓는 단계 */
+.grp{box-sizing:border-box;width:100%;border:2px solid var(--ink);border-radius:18px;padding:10px 10px 12px;display:flex;flex-direction:column;align-items:center;gap:5px}
+.cap{margin:0 0 3px;padding-left:6px;align-self:flex-start;font-size:13px;font-weight:700}
+.f.ok{background:var(--ink);color:var(--paper);min-height:40px}
+.f.ok::after{content:"\2713";font-weight:900}
+.f.pour{background:var(--paper);border:2px solid var(--ink);transition:transform .5s ease .25s,opacity .5s ease .25s}
+.f.pour span{color:var(--ink);font-weight:700}
+.f.pour span::after{content:" \2193"}
+.anim .pic:not(.live) .f.pour{transform:translateY(-12px);opacity:0}
+@media (max-width:899px){.dots{gap:4px}.probn{font-size:19px}.probt{font-size:15px}.dot.add{box-shadow:inset 0 0 0 2px var(--ink)}}
+@media (prefers-reduced-motion:reduce){.dot.add,.f.pour{transition:none}}
+/* 바뀐 한 주: 지금 줄은 작게, 그때 줄은 크게. 비워진 날(free)은 진료 칸에서 풀려난다 */
+.week.mini .d{height:38px;padding:0;border-radius:10px;align-items:center;justify-content:center;font-size:13px}
+.d.free{transition:background-color .5s ease,color .5s ease}
+.d.free small{transition:color .5s ease}
+.d.free:nth-child(3),.d.free:nth-child(3) small{transition-delay:.35s}.d.free:nth-child(4),.d.free:nth-child(4) small{transition-delay:.6s}.d.free:nth-child(6),.d.free:nth-child(6) small{transition-delay:.85s}.d.free:nth-child(7),.d.free:nth-child(7) small{transition-delay:1s}
+.anim .pic:not(.live) .d.free{background:var(--ink);color:var(--paper)}
+.anim .pic:not(.live) .d.free small{color:var(--paper)}
+.tobe{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
+.tobe .st{font-size:15px;line-height:1.4;padding:14px 16px}
+@media (max-width:899px){.tobe .st{font-size:14px;padding:12px}.week.mini .d{height:32px}}
+@media (prefers-reduced-motion:reduce){.d.free,.d.free small{transition:none}}
+/* 끝 그림: 하루하루는 흩어져도, 소프트웨어로 쌓은 작은 개선이 모여 추세가 오른다 */
+.chart{position:relative}
+.chart svg{display:block;width:100%;height:auto}
+.chart .gd{stroke:var(--line);stroke-width:1}
+.chart .dv{stroke:var(--dimline);stroke-width:1;stroke-dasharray:3 4}
+.chart .dt{fill:var(--dimline)}
+.chart .tr{fill:none;stroke:var(--ink);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0;transition:stroke-dashoffset 1.8s cubic-bezier(.4,.1,.3,1) .2s}
+.chart .tk{fill:var(--tick)}
+.chart .sweep{clip-path:inset(0 0 0 0);transition:clip-path 1.8s cubic-bezier(.4,.1,.3,1) .2s}
+.anim .pic:not(.live) .chart .tr{stroke-dashoffset:1}
+.anim .pic:not(.live) .chart .sweep{clip-path:inset(0 100% 0 0)}
+.yl{position:absolute;left:0;transform:translateY(-50%);font-size:12px;font-weight:900;line-height:1}
+.xs{display:grid;grid-template-columns:160fr 160fr 180fr;margin:6px 3.57% 0 7.14%;font-size:12px;font-weight:700}
+.xs span{padding:0 4px;text-align:center}
+.loop{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.lp{background:var(--blue-soft);color:var(--blue);font-weight:700;border-radius:999px;padding:5px 12px;font-size:14px}
+.lpn{margin-left:auto;font-size:13px;font-weight:500;color:var(--w-mute)}
+.leg .dot.day{background:var(--dimline)}
+.leg .ln{display:block;width:16px;height:3px;border-radius:2px;background:var(--ink);flex:none}
+.leg .tki{display:block;width:3px;height:12px;border-radius:2px;background:var(--tick);flex:none}
+@media (max-width:899px){.yl,.xs{font-size:11px}.lp{font-size:13px;padding:4px 10px}.lpn{margin-left:0;flex-basis:100%}}
+@media (prefers-reduced-motion:reduce){.chart .tr,.chart .sweep{transition:none}}
+</style>
+</head>
+<body>
+<main id="app"><section class="blk">
+<div class="scene"><div class="tx"><span class="pill" data-e="e1">1/13 세르클</span>
+<h1 class="big" data-e="e2" style="font-size: 60px">월매출 10억을 만드는<br/>경영 플레이북.</h1>
+<p class="note" data-e="e3"><br/></p></div><div class="pic"><div class="gauge"><div class="g" data-e="e4" style="flex: 2">2억</div><div class="g" data-e="e5" style="flex: 3">5억</div><div class="g" data-e="e6" style="flex: 5">10억</div></div>
+<p class="note" data-e="e7">확률우위를 획득하고 대수의 법칙으로 밀어버리는 게임</p></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e8">2/13 원장의 한 주</span>
+<h2 class="big" data-e="e9">원장님은 이번 주에도<br/>엿새를 진료했어요.</h2></div><div class="pic"><div class="week">
+<div class="d on" data-e="e10"><span>월</span><small>진료 9시~8시</small></div>
+<div class="d on" data-e="e11"><span>화</span><small>진료 9시~8시</small></div>
+<div class="d on" data-e="e12"><span>수</span><small>진료 9시~8시</small></div>
+<div class="d on" data-e="e13"><span>목</span><small>진료 9시~8시</small></div>
+<div class="d on" data-e="e14"><span>금</span><small>진료 9시~9시</small></div>
+<div class="d on" data-e="e15"><span>토</span><small>진료 9시~5시</small></div>
+<div class="d" data-e="e16"><span>일</span><small>밀린 정산</small></div>
+</div>
+<p class="note" data-e="e17">대표원장이 온힘을 다하는 병원</p></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e18">2/13 원장의 한 주</span>
+<h2 class="big" data-e="e19">아파도 쉴 수 없고,<br/>여행도 갈 수 없어요.</h2></div><div class="pic"><div class="week">
+<div class="d on" data-e="e20"><span>월</span><small>진료</small></div>
+<div class="d on" data-e="e21"><span>화</span><small>진료</small></div>
+<div class="d on" data-e="e22"><span>수</span><small>진료</small></div>
+<div class="d on" data-e="e23"><span>목</span><small>진료</small></div>
+<div class="d on" data-e="e24"><span>금</span><small>진료</small></div>
+<div class="d on" data-e="e25"><span>토</span><small>진료</small></div>
+<div class="d" data-e="e26"><span>일</span><small>밀린 정산</small></div>
+</div>
+<div style="display: flex; gap: 6px; margin-top: 12px">
+<div class="st" data-e="e27" style="flex: 1">올해 쓴 휴가 0일</div>
+<div class="st" data-e="e28" style="flex: 1">원장이 쉬면 매출 0원</div>
+</div></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e29">3/13 멈춘 매출</span>
+<h2 class="big" data-e="e30">그런데 월매출은<br/>2억 언저리에서<br/>멈춰 있어요.</h2></div><div class="pic"><div class="gauge"><div class="g on new" data-e="e31" style="flex: 2">2억</div><div class="g" data-e="e32" style="flex: 3">5억</div><div class="g" data-e="e33" style="flex: 5">10억</div></div></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e34">4/13 세 가지 매출</span>
+<h2 class="big" data-e="e35">원장이 진료한 만큼만<br/>버는 병원이라서 그래요.</h2></div><div class="pic"><div class="gauge"><div class="g on" data-e="e36" style="flex: 2">2억<small class="new">개인기 매출</small></div><div class="g" data-e="e37" style="flex: 3">5억</div><div class="g" data-e="e38" style="flex: 5">10억</div></div></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e39">4/13 세 가지 매출</span>
+<h2 class="big" data-e="e40">5억은 원장이 아니라<br/>시스템이 벌어요.</h2></div><div class="pic"><div class="gauge"><div class="g on" data-e="e41" style="flex: 2">2억<small>개인기 매출</small></div><div class="g on new" data-e="e42" style="flex: 3">5억<small>시스템 매출</small></div><div class="g" data-e="e43" style="flex: 5">10억</div></div></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e44">4/13 세 가지 매출</span>
+<h2 class="big" data-e="e45">10억은 그 시스템에<br/>광고를 부어서 만들어요.</h2></div><div class="pic"><div class="gauge"><div class="g on" data-e="e46" style="flex: 2">2억<small>개인기 매출</small></div><div class="g on" data-e="e47" style="flex: 3">5억<small>시스템 매출</small></div><div class="g on new" data-e="e48" style="flex: 5">10억<small>시스템에 광고를 부은 매출</small></div></div></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e49">5/13 플레이북</span>
+<h2 class="big" data-e="e50">월매출 10억까지 가는 길은<br/>순서와 방법이 정해져 있어요.</h2></div><div class="pic"><div class="gauge"><div class="g on" data-e="e51" style="flex: 2">2억</div><div class="g on" data-e="e52" style="flex: 3">5억</div><div class="g on" data-e="e53" style="flex: 5">10억</div></div>
+<div class="steps">
+<div class="st" data-e="e54">1단계 전환율 잡기</div>
+<div class="st" data-e="e55">2단계 객단가 &amp; LTV 높이기</div>
+<div class="st" data-e="e56">3단계 트래픽 붓기</div>
+</div>
+<p class="note" data-e="e57">단계마다 소프트웨어가 도와요.</p></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e58">6/13 1단계 전환율 잡기</span>
+<h2 class="big" data-e="e59">첫 단계는 퍼널을 정의하고<br/>전환률을 개선하는 일이예요.</h2></div><div class="pic"><div class="fn">
+<div class="f" data-e="e60" style="width: 100%">문의<span>?</span></div>
+<div class="f" data-e="e61" style="width: 90%">예약<span>?</span></div>
+<div class="f" data-e="e62" style="width: 80%">내원<span>?</span></div>
+<div class="f" data-e="e63" style="width: 70%">상담<span>?</span></div>
+<div class="f" data-e="e64" style="width: 60%">결제<span>?</span></div>
+<div class="f" data-e="e65" style="width: 50%">재방문<span>?</span></div>
+<div class="f" data-e="e66" style="width: 40%">재구매<span>?</span></div>
+</div>
+<p class="note" data-e="e67"><br/></p></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e68">6/13 1단계 전환율 잡기</span>
+<h2 class="big" data-e="e69">단계마다 몇 분이 들어와서<br/>몇 분이 넘어갔는지 측정하고,</h2>
+<p class="note" data-e="e70">차트 프로그램 기록을 읽어 와서 세어 드려요.</p></div><div class="pic"><div class="win"><div class="winbar"><b data-e="n1">세르클</b><span class="tab on" data-e="n2">퍼널</span><span class="tab" data-e="n3">고객</span><span class="tab" data-e="n4">광고</span><span class="tab" data-e="n5">실험</span></div><div class="winbody"><div class="r"><span class="nm" data-e="n6">문의</span><span class="track"><span class="fill" style="width: 100%"></span></span><span class="v" data-e="n7">635건</span></div><div class="r"><span class="nm" data-e="n8">예약</span><span class="track"><span class="fill" style="width: 84%"></span></span><span class="v" data-e="n9">347건, 문의의 55%</span></div><div class="r"><span class="nm" data-e="n10">내원</span><span class="track"><span class="fill" style="width: 74%"></span></span><span class="v" data-e="n11">284명, 예약의 82%</span></div><div class="r"><span class="nm" data-e="n12">상담</span><span class="track"><span class="fill" style="width: 74%"></span></span><span class="v" data-e="n13">284명</span></div><div class="r"><span class="nm" data-e="n14">결제</span><span class="track"><span class="fill" style="width: 58%"></span></span><span class="v" data-e="n15">154명, 상담의 54%</span></div><div class="r"><span class="nm" data-e="n16">재방문</span><span class="track"><span class="fill" style="width: 46%"></span></span><span class="v" data-e="n17">54명, 결제의 35%</span></div><div class="r"><span class="nm" data-e="n18">재구매</span><span class="track"><span class="fill" style="width: 40%"></span></span><span class="v" data-e="n19">28명, 결제의 18%</span></div></div></div>
+<p class="note" data-e="e78">문의, 예약, 재방문, 재구매 수는 가정이에요.</p></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e79">6/13 1단계 전환율 잡기</span>
+<h2 class="big" data-e="e80">단계마다 5-10%씩<br/>꾸준히 올려요.</h2>
+<button aria-expanded="false" class="more" data-more="d1" style="margin-top: 28px">자세히 보기</button></div><div class="pic"><div class="win"><div class="winbar"><b data-e="n20">세르클</b><span class="tab on" data-e="n21">퍼널</span><span class="tab" data-e="n22">고객</span><span class="tab" data-e="n23">광고</span><span class="tab" data-e="n24">실험</span></div><div class="winbody"><div class="r"><span class="nm" data-e="n25">문의</span><span class="track"><span class="fill" style="width: 100%"></span></span><span class="v" data-e="n26">635건</span></div><div class="r"><span class="nm" data-e="n27">예약</span><span class="track"><span class="fill" style="width: 86%"></span></span><span class="v" data-e="n28">55%<b class="up">61%</b></span></div><div class="r"><span class="nm" data-e="n29">내원</span><span class="track"><span class="fill" style="width: 78%"></span></span><span class="v" data-e="n30">82%<b class="up">90%</b></span></div><div class="r"><span class="nm" data-e="n31">상담</span><span class="track"><span class="fill" style="width: 78%"></span></span><span class="v" data-e="n32">기록률부터</span></div><div class="r"><span class="nm" data-e="n33">결제</span><span class="track"><span class="fill" style="width: 64%"></span></span><span class="v" data-e="n34">54%<b class="up">59%</b></span></div><div class="r"><span class="nm" data-e="n35">재방문</span><span class="track"><span class="fill" style="width: 54%"></span></span><span class="v" data-e="n36">35%<b class="up">39%</b></span></div><div class="r"><span class="nm" data-e="n37">재구매</span><span class="track"><span class="fill" style="width: 48%"></span></span><span class="v" data-e="n38">18%<b class="up">20%</b></span></div></div></div>
+<div class="gauge"><div class="g on new" data-e="e88" style="flex: 3.2; text-align: center">2억 → 3.2억</div><div class="g" data-e="e89" style="flex: 1.8">5억</div><div class="g" data-e="e90" style="flex: 5">10억</div></div>
+<p class="note" data-e="e91" style="text-align: center">각 퍼널을 10% 씩만 올려도 광고 없이 매출이 1.6배가 됩니다.<br/></p></div></div>
+</section>
+<section class="detail" hidden="" id="d1"><div class="detail-in"><div class="cards">
+<div class="card" style="background: var(--paper)"><h3 data-e="e92">가장 중요한 단계를 확인해요</h3><p data-e="e93">유입이 더 필요한지, 저관여 고객을 고관여 고객으로 전환시키는게 중요한 단계인지, 고관여 고객의 만족도 개선이 필요한지, 가장 중요한 조치를 숫자로 확인.</p></div>
+<div class="card" style="background: var(--paper)"><h3 data-e="e94">캠페인 대상을 정하고 실험을 진행해요</h3><p data-e="e95">고객 만족도에 친절도를 넣고 인센티브화한다면 고객 만족도가 어떻게 변화하는지, 페리에/에비앙을 제공했을 때 불만도와 재방문률이 어떻게 달라지는지.</p></div>
+<div class="card" style="background: var(--paper)"><h3 data-e="e96">퍼널의 볼륨과 전환률 개선 정도를 파악해요</h3><p data-e="e97">한 달 동안 다시 연락한 1,136명 가운데 예약 잡음 328명, 생각해 본다 305명. 실장별 결제율도 나란히 봐요.</p></div>
+<div class="card" style="background: var(--paper)"><h3 data-e="e98">광고비는 한 푼도 더 쓰지 않았지만 매출은 1.6배가 돼요</h3><p data-e="e99">광고비 1,400만 원 그대로인데 10% 씩 다섯 단계가 개선되어 매출이 1.6배 달성.</p></div>
+</div>
+<p class="note" data-e="e100">숫자는 모두 예시이고 일부는 가정이에요.</p></div></section>
+<section class="blk">
+<div class="scene"><div class="tx"><span class="pill" data-e="e101">7/13 플레이북의 철학</span>
+<h2 class="big" data-e="e102" style="font-size: 38px">한 번의 대박이 아니에요.<br/>조금 유리해진 확률을<br/>날마다 오는 손님 수만큼<br/>되풀이하는 거예요.</h2></div><div class="pic"><div class="prob"><div class="probhd"><span class="probt" data-e="m1">상담한 분이 결제하는 비율</span><span class="probn"><span data-e="m2">54%</span><span aria-hidden="true" class="arr">→</span><b data-e="m3">59%</b><span class="chip" data-e="m4">10% 개선</span></span></div><div aria-label="상담 100명 가운데 결제 54명, 개선한 뒤 59명" class="dots" role="img"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot add"></i><i class="dot add"></i><i class="dot add"></i><i class="dot add"></i><i class="dot add"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><p class="leg"><span><i class="dot on"></i><span data-e="m5">지금 결제하는 54명</span></span><span><i class="dot add"></i><span data-e="m6">10% 개선하면 더 결제하는 5명</span></span><span><i class="dot"></i><span data-e="m7">상담한 100명</span></span></p></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 8px">
+<div class="card"><h3 data-e="e104">하루</h3><p data-e="e105">상담 12명 가운데 결제 한 분이 늘까 말까</p></div>
+<div class="card"><h3 data-e="e106">한 달</h3><p data-e="e107">상담 284명 가운데 14명이 더 결제, 약 790만 원</p></div>
+<div class="card on"><h3 data-e="e108">일 년</h3><p data-e="e109">약 170명이 더 결제, 약 9,500만 원</p></div>
+</div>
+<p class="note" data-e="e110">하루로는 안 보이고 일 년으로는 뚜렷해요. 한 분 55.7만 원으로 셈한 예시예요.</p></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e111">8/13 2단계 객단가 높이기</span>
+<h2 class="big" data-e="e112">둘째 단계는 한 분이 쓰는 돈을<br/>극대화하는 작업이예요.</h2></div><div class="pic"><div class="fn">
+<div class="f dim" data-e="e113" style="width: 100%">문의</div>
+<div class="f dim" data-e="e114" style="width: 86%">예약</div>
+<div class="f dim" data-e="e115" style="width: 78%">내원</div>
+<div class="f dim" data-e="e116" style="width: 78%">상담</div>
+<div class="f dim" data-e="e117" style="width: 64%">결제</div>
+<div class="f on" data-e="e118" style="width: 54%">재방문<span>다시 오시는 것</span></div>
+<div class="f on" data-e="e119" style="width: 48%">재구매<span>다시 결제하시는 것</span></div>
+</div>
+<p class="lab" data-e="e120">한 분이 쓰는 돈</p>
+<div class="bar"><div class="b" data-e="e121" style="flex: 5">첫 결제</div><div class="b on" data-e="e122" style="flex: 2">재구매</div></div>
+<p class="note" data-e="e123">객단가는 첫 결제에서 끝나지 않아요. 퍼널의 마지막 두 단계, 재방문과 재구매가 LTV를 정해요.</p></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e124">8/13 2단계 객단가 높이기</span>
+<h2 class="big" data-e="e125">저관여 고객을<br/>고관여 고객으로 바꾸고,</h2></div><div class="pic"><div style="display: flex; gap: 8px; align-items: stretch">
+<div class="card" style="flex: 1"><h3 data-e="e126">저관여 고객</h3><p data-e="e127">이벤트 가격으로 한 번 다녀간 분. 첫날 결제 10만 원 미만.</p></div>
+<div aria-hidden="true" style="display: flex; align-items: center; font-size: 28px; font-weight: 900">→</div>
+<div class="card on" style="flex: 1"><h3 data-e="e128">고관여 고객</h3><p data-e="e129">병원을 믿고 꾸준히 다니는 분. 여섯 달 안에 50만 원 이상.</p></div>
+</div>
+<div class="win"><div class="winbar"><b data-e="n39">세르클</b><span class="tab" data-e="n40">퍼널</span><span class="tab on" data-e="n41">고객</span><span class="tab" data-e="n42">광고</span><span class="tab" data-e="n43">실험</span></div><div class="winbody"><p class="lab" data-e="e130">저관여 고객이 고관여 고객이 된 비율</p><div class="hb"><div class="hbl"><span data-e="n44">두 달 안에 두 번 더 오신 분</span><b data-e="n45">32%</b></div><span class="track"><span class="fill" style="width: 32%"></span></span></div><div class="hb"><div class="hbl"><span data-e="n46">그렇지 않은 분</span><b data-e="n47">1.8%</b></div><span class="track"><span class="fill" style="width: 3%"></span></span></div></div></div>
+<p class="note" data-e="e135">한 의원의 실제 기록이에요. 다시 오시게 하는 일이 고관여 고객을 만들어요.</p></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e136">8/13 2단계 객단가 높이기</span>
+<h2 class="big" data-e="e137">브랜딩과 시그니처 상품을<br/>하나로 묶으면,</h2></div><div class="pic"><p class="lab" data-e="e138" style="margin-top: 0">현재 - 고객들이 원장만 보고 오고 대표 시술이 없어 객단가를 높이지 못해요.</p>
+<div class="bar" style="height: 44px"><div class="b" data-e="e139" style="flex: 1">보톡스</div><div class="b" data-e="e140" style="flex: 1">필러</div><div class="b" data-e="e141" style="flex: 1">리프팅</div><div class="b" data-e="e142" style="flex: 1">레이저</div><div class="b" data-e="e143" style="flex: 1">스킨부스터</div><div class="b" data-e="e144" style="flex: 1">그 밖</div></div>
+<p class="lab" data-e="e145">미래 - 브랜딩으로 오니 봉직의로 돌아가고 시그니처 시술로 오니 객단가를 높일 수 있어요.</p>
+<div class="bar" style="height: 72px"><div class="b on" data-e="e146" style="flex: 4; font-size: 18px">[병원 이름] 시그니처 [시술 이름]</div><div class="b" data-e="e147" style="flex: 1">보톡스</div><div class="b" data-e="e148" style="flex: 1">필러</div><div class="b" data-e="e149" style="flex: 1">그 밖</div></div>
+<p class="note" data-e="e150">손님이 원장 한 사람이 아니라 병원과 상품을 찾아오면 높은 객단가에 원장이 자리를 비워도 팔려요.</p></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e151">8/13 2단계 객단가 높이기</span>
+<h2 class="big" data-e="e152">신환 수는 그대로인데<br/>월매출 5억에 육박하게 돼요.</h2>
+<button aria-expanded="false" class="more" data-more="d2" style="margin-top: 28px">자세히 보기</button></div><div class="pic"><div class="gauge"><div class="g on" data-e="e153" style="flex: 2">2억</div><div class="g on new" data-e="e154" style="flex: 3">5억<small>시스템이 만든 매출</small></div><div class="g" data-e="e155" style="flex: 5">10억</div></div>
+<p class="note" data-e="e156">5단계 퍼널을 각 15% 개선 &amp; 객단가 30% 상향<br/></p></div></div>
+</section>
+<section class="detail" hidden="" id="d2"><div class="detail-in"><div class="cards">
+<div class="card" style="background: var(--paper)"><h3 data-e="e157">저관여/고관여 고객을 집중적으로 분석해요.</h3><p data-e="e158">누가 저관여에서 고관여로 넘어갔는지, 넘어간 분들은 무엇이 달랐는지 기록으로 확인해요.</p></div>
+<div class="card" style="background: var(--paper)"><h3 data-e="e159">재방문 → 재구매 전환을 전략적으로 유도해요.</h3><p data-e="e160">남은 회차가 두세 번인 분, 시술 뒤 석 달이 지난 분. 재방문과 재구매를 따로 세어요.</p></div>
+<div class="card" style="background: var(--paper)"><h3 data-e="e161">시그니처 상품의 공헌이익을 의도적으로 설계해요.</h3><p data-e="e162">시그니처 시술로 처음 오신 분이 얼마나 다시 오고 다시 결제하는지, 다른 시술과 나란히 봐요.</p></div>
+<div class="card" style="background: var(--paper)"><h3 data-e="e163">고객이 내는 돈(LTV)이 늘어나는걸 체계적으로 확인해요.</h3><p data-e="e164">같은 달에 처음 오신 분들이 여섯 달, 일 년 동안 쓴 돈을 이어서 봐요.</p></div>
+<div class="card" style="background: var(--paper)"><h3 data-e="e165">만족도 설문과 직원별 성과분석</h3><p data-e="e166">만족도 분석으로 재구매를 창출하고 성과분석에 따라 시스템을 고도화해요.</p></div>
+<div class="card" style="background: var(--paper)"><h3 data-e="e167">상담실 효율 극대화</h3><p data-e="e168">상담 기록을 보고 무엇을 잘했고 무엇을 놓쳤는지 날마다 알려 줘요.</p></div>
+</div></div></section>
+<section class="blk">
+<div class="scene"><div class="tx"><span class="pill" data-e="e169">9/13 3단계 트래픽 붓기</span>
+<h2 class="big" data-e="e170">퍼널과 객단가를 잡았으니<br/>본격적으로 광고비를 늘려요.</h2></div><div class="pic"><div class="fn">
+<div class="f pour" data-e="e171" style="width: 100%">광고<span>여기에 더 부어요</span></div><div class="grp"><p class="cap" data-e="m8">1단계에서 잡은 퍼널</p><div class="f ok" data-e="e172" style="width: 92%">문의</div><div class="f ok" data-e="e173" style="width: 84%">예약</div><div class="f ok" data-e="e174" style="width: 76%">내원</div><div class="f ok" data-e="e175" style="width: 76%">상담</div><div class="f ok" data-e="e176" style="width: 64%">결제</div></div><div class="grp"><p class="cap" data-e="m9">2단계에서 높인 LTV</p><div class="f ok" data-e="e177" style="width: 56%">재방문</div><div class="f ok" data-e="e178" style="width: 50%">재구매</div></div>
+</div>
+<p class="note" data-e="e179">1단계와 2단계에서 고쳐 둔 퍼널 맨 위에 광고 단계가 붙어요. 순서를 바꾸면 고치지 않은 퍼널에 돈을 붓게 돼요.</p></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e180">9/13 3단계 트래픽 붓기</span>
+<h2 class="big" data-e="e181">광고비 100만 원에<br/>몇 분이 결제하는지<br/>이미 아니까, 그 숫자가<br/>줄어들 때까지 늘려요.</h2></div><div class="pic"><div class="win"><div class="winbar"><b data-e="n48">세르클</b><span class="tab" data-e="n49">퍼널</span><span class="tab" data-e="n50">고객</span><span class="tab on" data-e="n51">광고</span><span class="tab" data-e="n52">실험</span></div><div class="winbody"><div class="row"><div class="c hd" data-e="e182">한 달 광고비</div><div class="c hd" data-e="e183">100만 원당 결제</div><div class="c hd" data-e="e184">판단</div></div><div class="row"><div class="c" data-e="e185">1,400만 원</div><div class="c" data-e="e186">13명</div><div class="c" data-e="e187">지금</div></div><div class="row"><div class="c" data-e="e188">2,000만 원</div><div class="c" data-e="e189">13명</div><div class="c" data-e="e190">그대로예요. 더 늘려요</div></div><div class="row"><div class="c" data-e="e191">3,000만 원</div><div class="c" data-e="e192">12명</div><div class="c" data-e="e193">거의 그대로예요. 더 늘려요</div></div><div class="row"><div class="c on" data-e="e194">4,000만 원</div><div class="c on" data-e="e195">9명</div><div class="c on" data-e="e196">줄었어요. 여기서 멈춰요</div></div></div></div>
+<p class="note" data-e="e197">예시예요. 확신 없이 붓는 광고비가 아니라, 숫자를 보며 올리는 광고비예요.</p></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e198">9/13 3단계 트래픽 붓기</span>
+<h2 class="big" data-e="e199">튼튼한 퍼널과 높은 객단가에<br/>트래픽을 부으면 월 10억이 돼요</h2>
+<button aria-expanded="false" class="more" data-more="d3" style="margin-top: 28px">자세히 보기</button></div><div class="pic"><div class="gauge"><div class="g on" data-e="e200" style="flex: 2">2억</div><div class="g on" data-e="e201" style="flex: 3">5억</div><div class="g on new" data-e="e202" style="flex: 5">10억<small>시스템에 광고를 부은 매출</small></div></div>
+<p class="note" data-e="e203">셈 예시이고 약속하는 값이 아니에요.</p></div></div>
+</section>
+<section class="detail" hidden="" id="d3"><div class="detail-in"><div class="cards">
+<div class="card" style="background: var(--paper)"><h3 data-e="e204">채널별 고객 획득 비용(CAC)을 추적해요.</h3><p data-e="e205">네이버 검색 15만 원, 옥외 광고 18만 원, 유튜브 25만 원, 인스타그램 30만 원. 어디에 더 부을지 보여요.</p></div>
+<div class="card" style="background: var(--paper)"><h3 data-e="e206">목표 매출에서 역산해서 오늘 필요한 광고비를 도출해요.</h3><p data-e="e207">다음 달 목표를 넣으면 필요한 결제, 상담, 문의 수와 광고비가 나와요.</p></div>
+<div class="card" style="background: var(--paper)"><h3 data-e="e208">광고를 늘린 뒤 퍼널이 버티는지 봐요</h3><p data-e="e209">문의가 늘어도 예약과 결제 전환률이 그대로인지, 어느 단계가 먼저 밀리는지 달마다 확인해요.</p></div>
+<div class="card" style="background: var(--paper)"><h3 data-e="e210">매일 측정하고 관리하며 개선시켜나가요.</h3><p data-e="e211">어제 수납, 상담과 결제 수, 이번 달 목표까지 남은 금액을 아침 8시 카카오톡으로 받아요.</p></div>
+</div>
+<p class="note" data-e="e212">숫자는 모두 예시예요.</p></div></section>
+<section class="blk">
+<div class="scene"><div class="tx"><span class="pill" data-e="e213">10/13 원장의 한 주</span>
+<h2 class="big" data-e="e214">원장님께 진료는 선택이 돼요.<br/></h2></div><div class="pic"><p class="lab" data-e="k1" style="margin-top: 0">지금</p><div class="week mini"><div class="d on" data-e="k2"><span>월</span></div><div class="d on" data-e="k3"><span>화</span></div><div class="d on" data-e="k4"><span>수</span></div><div class="d on" data-e="k5"><span>목</span></div><div class="d on" data-e="k6"><span>금</span></div><div class="d on" data-e="k7"><span>토</span></div><div class="d" data-e="k8"><span>일</span></div></div><p class="lab" data-e="k9">플레이북을 돌린 뒤</p><div class="week">
+<div class="d on" data-e="e215"><span>월</span><small>진료</small></div>
+<div class="d on" data-e="e216"><span>화</span><small>진료</small></div>
+<div class="d free" data-e="e217"><span>수</span><small>숫자 보고 다음 실험 정하기</small></div>
+<div class="d free" data-e="e218"><span>목</span><small>봉직의가 진료</small></div>
+<div class="d on" data-e="e219"><span>금</span><small>진료</small></div>
+<div class="d free" data-e="e220"><span>토</span><small>가족과 여행</small></div>
+<div class="d free" data-e="e221"><span>일</span><small>가족과 여행</small></div>
+</div><div class="tobe"><div class="st" data-e="k10">진료일이 엿새에서 사흘로 줄어요</div><div class="st" data-e="k11">봉직의를 채용해 진료를 나눠요</div><div class="st" data-e="k12">직원 보상과 면담에 시간을 써요</div><div class="st" data-e="k13">가족과 편하게 휴가를 다녀와요</div></div>
+<p class="note" data-e="e222">진료를 그만두는 게 아니에요. 진료할 날을 원장님이 고를 수 있게 돼요.</p></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e223">11/13 먼저 시작한 의원</span>
+<h2 class="big" data-e="e224">먼저 시작한 의원에서는<br/>두 주 만에<br/>이런 일이 바뀌었어요.</h2></div><div class="pic"><div class="li" data-e="e225">지난 손님께 다시 전화를 돌려 32분과 연결됐어요<small>광고비를 쓰지 않고, 다시 오실 수 있는 분을 찾아낸 거예요.</small></div>
+<div class="li" data-e="e226">만족도 설문에서 나온 바람을 다음 달 이벤트에 넣었어요<small>감으로 정하던 이벤트를 손님 목소리로 정하게 된 거예요.</small></div>
+<div class="li" data-e="e227">칭찬받은 직원에게 분기 성과급을 주기로 했어요<small>재구매와 객단가를 높이는 가장 효과적인 통로예요.</small></div>
+<div class="li" data-e="e228">주차비를 전액 지원하고, VIP 응대를 따로 시작했어요<small>다녀가신 분의 만족도를 높이려는 거예요.</small></div>
+<p class="note" data-e="e229">경기도의 한 피부과 원장이 직접 전한 변화예요. 이름은 허락을 받은 뒤 밝혀요.</p></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e230">12/13 묻고 답하기</span>
+<h2 class="big" data-e="e231">원장님들이<br/>꼭 묻는 것.</h2></div><div class="pic faq"><div class="li" data-e="e232">지금 쓰는 차트 프로그램을 바꿔야 하나요?<small>아니요. 쓰시던 프로그램은 그대로 두고 기록을 읽어 와요. 스마트닥터부터 준비하고 있어요.</small></div>
+<div class="li" data-e="e233">직원이 따로 입력해야 하나요?<small>아니요. 지금 쓰시는 차트 프로그램 기록을 그대로 읽어와요. 상담 내용처럼 지금 안 남기고 계신 것만 새로 남기시면 돼요.</small></div>
+<div class="li" data-e="e234">환자 정보는 어떻게 다루나요?<small>개인정보 처리 위탁 계약을 먼저 맺고 소프트웨어 및 컨설팅에 활용해요. 계약이 끝나면 지워요.</small></div>
+<div class="li" data-e="e235">시작하고 숫자를 보기까지 얼마나 걸리나요?<small>기록을 받고 한두 주면 퍼널의 첫 숫자를 보여 드려요. 먼저 시작한 의원은 두 주 만에 첫 변화가 있었어요.</small></div>
+<div class="li" data-e="e236">가격은 얼마인가요?<small>의원 규모와 지금 단계에 따라 달라요. 상담에서 퍼널을 같이 본 뒤 말씀드려요.</small></div><div class="li" data-e="q1">실제 플레이북 자료를 볼 수 있나요?<small>네, <a href="https://bk-nam.github.io/cercle-landing/playbook/insta-db-upsell/" rel="noopener" target="_blank">인스타 DB &amp; 업셀링 전술 플레이북 사례</a>를 보여드립니다.</small></div></div></div>
+<div class="scene"><div class="tx"><span class="pill" data-e="e237">13/13 세르클</span>
+<h2 class="big" data-e="e238" style="font-size: 56px">월매출 10억을 만드는<br/>경영 플레이북.</h2>
+<p data-e="e239" style="font-size: 22px; font-weight: 700; margin: 20px 0 0">단계마다 소프트웨어가 도와요.</p>
+<a class="cta" data-e="e240" href="#">상담 신청하기</a></div><div class="pic"><div class="chart"><svg aria-hidden="true" viewbox="0 0 560 296"><line class="gd" x1="40" x2="540" y1="40" y2="40"></line><line class="gd" x1="40" x2="540" y1="171" y2="171"></line><line class="gd" x1="40" x2="540" y1="250" y2="250"></line><line class="dv" x1="200" x2="200" y1="24" y2="270"></line><line class="dv" x1="360" x2="360" y1="24" y2="270"></line><g class="sweep"><circle class="dt" cx="44" cy="245.4" r="2.6"></circle><circle class="dt" cx="51" cy="255.5" r="2.6"></circle><circle class="dt" cx="58" cy="243.0" r="2.6"></circle><circle class="dt" cx="65" cy="240.3" r="2.6"></circle><circle class="dt" cx="72" cy="229.6" r="2.6"></circle><circle class="dt" cx="79" cy="239.0" r="2.6"></circle><circle class="dt" cx="86" cy="257.5" r="2.6"></circle><circle class="dt" cx="93" cy="245.8" r="2.6"></circle><circle class="dt" cx="100" cy="253.6" r="2.6"></circle><circle class="dt" cx="107" cy="240.3" r="2.6"></circle><circle class="dt" cx="114" cy="241.1" r="2.6"></circle><circle class="dt" cx="121" cy="236.6" r="2.6"></circle><circle class="dt" cx="128" cy="207.4" r="2.6"></circle><circle class="dt" cx="135" cy="243.8" r="2.6"></circle><circle class="dt" cx="142" cy="237.2" r="2.6"></circle><circle class="dt" cx="149" cy="235.7" r="2.6"></circle><circle class="dt" cx="156" cy="201.4" r="2.6"></circle><circle class="dt" cx="163" cy="199.2" r="2.6"></circle><circle class="dt" cx="170" cy="210.7" r="2.6"></circle><circle class="dt" cx="177" cy="215.6" r="2.6"></circle><circle class="dt" cx="184" cy="225.8" r="2.6"></circle><circle class="dt" cx="191" cy="219.1" r="2.6"></circle><circle class="dt" cx="198" cy="226.2" r="2.6"></circle><circle class="dt" cx="205" cy="206.9" r="2.6"></circle><circle class="dt" cx="212" cy="219.1" r="2.6"></circle><circle class="dt" cx="219" cy="218.3" r="2.6"></circle><circle class="dt" cx="226" cy="200.4" r="2.6"></circle><circle class="dt" cx="233" cy="234.1" r="2.6"></circle><circle class="dt" cx="240" cy="214.6" r="2.6"></circle><circle class="dt" cx="247" cy="222.1" r="2.6"></circle><circle class="dt" cx="254" cy="192.8" r="2.6"></circle><circle class="dt" cx="261" cy="189.0" r="2.6"></circle><circle class="dt" cx="268" cy="192.9" r="2.6"></circle><circle class="dt" cx="275" cy="194.4" r="2.6"></circle><circle class="dt" cx="282" cy="203.4" r="2.6"></circle><circle class="dt" cx="289" cy="195.6" r="2.6"></circle><circle class="dt" cx="296" cy="183.1" r="2.6"></circle><circle class="dt" cx="303" cy="173.4" r="2.6"></circle><circle class="dt" cx="310" cy="177.9" r="2.6"></circle><circle class="dt" cx="317" cy="201.9" r="2.6"></circle><circle class="dt" cx="324" cy="169.5" r="2.6"></circle><circle class="dt" cx="331" cy="183.2" r="2.6"></circle><circle class="dt" cx="338" cy="183.9" r="2.6"></circle><circle class="dt" cx="345" cy="153.1" r="2.6"></circle><circle class="dt" cx="352" cy="174.1" r="2.6"></circle><circle class="dt" cx="359" cy="190.9" r="2.6"></circle><circle class="dt" cx="366" cy="140.4" r="2.6"></circle><circle class="dt" cx="373" cy="164.2" r="2.6"></circle><circle class="dt" cx="380" cy="164.9" r="2.6"></circle><circle class="dt" cx="387" cy="150.8" r="2.6"></circle><circle class="dt" cx="394" cy="166.2" r="2.6"></circle><circle class="dt" cx="401" cy="152.8" r="2.6"></circle><circle class="dt" cx="408" cy="126.1" r="2.6"></circle><circle class="dt" cx="415" cy="154.2" r="2.6"></circle><circle class="dt" cx="422" cy="145.1" r="2.6"></circle><circle class="dt" cx="429" cy="142.2" r="2.6"></circle><circle class="dt" cx="436" cy="142.3" r="2.6"></circle><circle class="dt" cx="443" cy="118.6" r="2.6"></circle><circle class="dt" cx="450" cy="107.3" r="2.6"></circle><circle class="dt" cx="457" cy="78.4" r="2.6"></circle><circle class="dt" cx="464" cy="99.6" r="2.6"></circle><circle class="dt" cx="471" cy="73.8" r="2.6"></circle><circle class="dt" cx="478" cy="69.1" r="2.6"></circle><circle class="dt" cx="485" cy="50.2" r="2.6"></circle><circle class="dt" cx="492" cy="48.5" r="2.6"></circle><circle class="dt" cx="499" cy="49.3" r="2.6"></circle><circle class="dt" cx="506" cy="71.6" r="2.6"></circle><circle class="dt" cx="513" cy="17.5" r="2.6"></circle><circle class="dt" cx="520" cy="22.6" r="2.6"></circle><circle class="dt" cx="527" cy="45.5" r="2.6"></circle><circle class="dt" cx="534" cy="62.1" r="2.6"></circle><rect class="tk" height="12" rx="1.5" width="3" x="40" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="52" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="64" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="76" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="88" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="100" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="112" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="124" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="136" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="148" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="160" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="172" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="184" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="196" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="208" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="220" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="232" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="244" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="256" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="268" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="280" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="292" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="304" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="316" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="328" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="340" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="352" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="364" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="376" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="388" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="400" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="412" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="424" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="436" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="448" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="460" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="472" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="484" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="496" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="508" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="520" y="276"></rect><rect class="tk" height="12" rx="1.5" width="3" x="532" y="276"></rect></g><path class="tr" d="M40,250 C110,243 150,229 200,218 S300,192 360,171 S480,112 540,40" pathlength="1"></path></svg><span class="yl" data-e="r1" style="top: 13.5%">10억</span><span class="yl" data-e="r2" style="top: 57.8%">5억</span><span class="yl" data-e="r3" style="top: 84.5%">2억</span></div><div class="xs"><span data-e="r4">1단계 전환율</span><span data-e="r5">2단계 LTV</span><span data-e="r6">3단계 트래픽</span></div><div class="win"><div class="winbar"><b data-e="r7">세르클</b><span class="tab" data-e="r8">퍼널</span><span class="tab" data-e="r9">고객</span><span class="tab" data-e="r10">광고</span><span class="tab on" data-e="r11">실험</span></div><div class="winbody loop"><span class="lp" data-e="r12">측정</span><span aria-hidden="true" class="arr">→</span><span class="lp" data-e="r13">실험</span><span aria-hidden="true" class="arr">→</span><span class="lp" data-e="r14">개선</span><span class="lpn" data-e="r15">소프트웨어가 날마다 되풀이하게 도와요</span></div></div><p class="leg"><span><i class="tki"></i><span data-e="r16">소프트웨어로 쌓은 작은 개선</span></span><span><i class="dot day"></i><span data-e="r17">하루하루의 매출</span></span><span><i class="ln"></i><span data-e="r18">쌓여서 오르는 추세</span></span></p>
+<p class="note" data-e="e244">이 페이지의 숫자는 예시이고 일부는 가정이에요. 약속하는 값이 아니에요.</p></div></div>
+</section></main>
+<script id="main">(function(){
+'use strict';
+var app=document.getElementById('app');
+/* 자세히 보기 */
+app.addEventListener('click',function(ev){
+  var a=ev.target.closest('a.cta');if(a){ev.preventDefault();return}
+  var b=ev.target.closest('[data-more]');if(!b){return}
+  var d=document.getElementById(b.getAttribute('data-more'));if(!d){return}
+  var open=d.hidden;d.hidden=!open;b.setAttribute('aria-expanded',open?'true':'false');
+  b.textContent=open?'자세히 보기 접기':'자세히 보기';
+  if(open){d.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})}
+});
+
+/* 넓은 화면: 그림을 한자리에 세우고 문장만 넘긴다 */
+var mq=window.matchMedia('(min-width: 900px) and (min-height: 620px)');
+function scenesOf(b){return Array.prototype.filter.call(b.children,function(c){return c.classList.contains('scene')})}
+function build(){
+  Array.prototype.forEach.call(document.querySelectorAll('.blk'),function(b){
+    if(b.classList.contains('pin')){return}
+    var sc=scenesOf(b),stage=document.createElement('div');stage.className='stage';
+    sc.forEach(function(s,i){var p=s.querySelector('.pic');if(p){p.setAttribute('data-i',i);p.classList.remove('live');stage.appendChild(p)}});
+    stage.style.gridRow='1 / span '+sc.length;b.appendChild(stage);b.classList.add('pin');
+  });
+  onScroll();
+}
+function unbuild(){
+  Array.prototype.forEach.call(document.querySelectorAll('.blk.pin'),function(b){
+    var sc=scenesOf(b),stage=b.querySelector('.stage');
+    if(stage){Array.prototype.slice.call(stage.children).forEach(function(p){var s=sc[+p.getAttribute('data-i')];p.classList.remove('show');p.classList.add('live');if(s){s.appendChild(p)}});stage.remove()}
+    b.classList.remove('pin');
+  });
+}
+var canAnim=!!window.IntersectionObserver&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches,io=null;
+if(canAnim){
+  app.classList.add('anim');
+  io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting&&!(e.target.parentNode&&e.target.parentNode.classList.contains('stage'))){e.target.classList.add('live')}
+  })},{threshold:0.3});
+  Array.prototype.forEach.call(document.querySelectorAll('.pic'),function(p){io.observe(p)});
+}
+var tick=false;
+function onScroll(){
+  tick=false;var mid=window.innerHeight/2;
+  Array.prototype.forEach.call(document.querySelectorAll('.blk.pin'),function(b){
+    var sc=scenesOf(b),idx=0;
+    for(var i=0;i<sc.length;i++){if(sc[i].getBoundingClientRect().top<=mid){idx=i}}
+    Array.prototype.forEach.call(b.querySelectorAll('.stage > .pic'),function(p){var on=+p.getAttribute('data-i')===idx;p.classList.toggle('show',on);p.classList.toggle('live',on)});
+  });
+}
+function req(){if(!tick){tick=true;window.requestAnimationFrame(onScroll)}}
+function layout(){if(mq.matches){build()}else{unbuild()}}
+layout();
+if(mq.addEventListener){mq.addEventListener('change',layout)}
+window.addEventListener('scroll',req,{passive:true});window.addEventListener('resize',req);
+
+})();
+</script>
+</body>
+</html>
